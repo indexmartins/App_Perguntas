@@ -18,8 +18,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
       'respostas': ['Coelho', 'Cobra', 'Elefante', 'Leão'],
     },
     {
-      'texto': 'Qual é o seu instrutor favorito?',
-      'respostas': ['Maria', 'João', 'Leo', 'Pedro'],
+      'texto': 'Qual é o seu carro favorito?',
+      'respostas': ['Uno', 'Gol', 'Onix', 'Punto'],
     }
   ];
   void _responder() {
@@ -43,6 +43,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.indigo[900],
           title: Text('Perguntas'),
         ),
         body: temPerguntaSelecionada
@@ -50,6 +51,13 @@ class _PerguntaAppState extends State<PerguntaApp> {
                 children: <Widget>[
                   Questao(_perguntas[_perguntaSelecionada]['texto']),
                   ...respostas.map((t) => Resposta(t, _responder)).toList(),
+                  Container(
+                    child: Image.asset(
+                      'assets/logo.png',
+                      width: 200,
+                      height: 200,
+                    ),
+                  )
                 ],
               )
             : Resultado(),
