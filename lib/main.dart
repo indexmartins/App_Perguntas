@@ -18,8 +18,8 @@ class _PerguntaAppState extends State<PerguntaApp> {
       'respostas': ['Coelho', 'Cobra', 'Elefante', 'Leão'],
     },
     {
-      'texto': 'Qual é o seu carro favorito?',
-      'respostas': ['Uno', 'Gol', 'Golf Tunado', 'Tesla'],
+      'texto': 'Qual é o seu instrutor favorito?',
+      'respostas': ['Fabio', 'João', 'Golf Tunado', 'Tesla'],
     }
   ];
   void _responder() {
